@@ -59,6 +59,97 @@ Fabric                      | Network            | Network
 
 ---
 
+### Code Repository
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```text
+BUILD.gn
+CONTRIBUTING.md
+build
+build_overrides
+docs
+examples
+    all-clusters-app
+        all-clusters-common
+        esp32
+        linux
+    bridge-app
+    chip-tool
+    common
+    platform
+        esp32
+        linux
+integrations
+```
+
+:::
+
+::: {.column width="50%"}
+
+```text
+scripts
+    activate.sh -> bootstrap.sh
+    bootstrap.sh
+src
+    include
+    lib
+    platform
+        ESP32
+        Linux
+    protocols
+    system
+    tools
+        chip-cert
+    transport
+third_party
+    pigweed
+    zap
+zzz_generated
+```
+
+:::
+
+::::
+
+---
+
+### Supported development platforms
+
+:::: {.columns}
+
+::: {.column width="50%" text-align="left"}
+
+- Embedded
+  - ESP32
+  - FreeRTOS
+  - Linux
+  - mbed
+  - nrfconnect
+  - nxp
+  - Tizen
+  - Zephyr
+
+:::
+
+::: {.column width="50%"}
+
+- Mobile
+  - Android
+  - iOS
+- Desktop
+  - Linux
+  - macOS
+  - Windows
+
+:::
+
+::::
+
+---
+
 ### Linux Device Firmware Development
 
 - Build and test on a Raspberry Pi 4
