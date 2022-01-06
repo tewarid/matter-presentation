@@ -214,6 +214,16 @@ zzz_generated
 
 Command line tool to commission and interact with devices
 
+Install dependencies for macOS
+
+```bash
+brew install openssl pkg-config
+cd /usr/local/lib/pkgconfig
+ln -s ../../Cellar/openssl@1.1/1.1.1g/lib/pkgconfig/* .
+```
+
+Build and run
+
 ```bash
 cd connectedhomeip
 unalias python
