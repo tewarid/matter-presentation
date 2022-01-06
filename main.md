@@ -259,7 +259,7 @@ ninja -C out/debug
 
 ---
 
-### Commissioning on iOS
+### Commissioning on iOS 15
 
 :::: {.columns}
 
@@ -284,6 +284,24 @@ ninja -C out/debug
 :::
 
 ::::
+
+---
+
+### Pair with another controller
+
+Open commissioning window on device
+
+```bash
+./out/debug/chip-tool pairing \
+  open-commissioning-window \
+  1 1 400 2000 3840
+```
+
+Use `onnetwork` pairing to discover devices and pair with first device found
+
+```bash
+./out/debug/chip-tool pairing onnetwork 0 20202021
+```
 
 ---
 
