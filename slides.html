@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Devendra Tewari">
-  <meta name="dcterms.date" content="2021-11-25">
+  <meta name="dcterms.date" content="2022-04-19">
   <title>Matter</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -95,56 +95,40 @@
 <section id="title-slide">
   <h1 class="title">Matter</h1>
   <p class="author">Devendra Tewari</p>
-  <p class="date">November 25, 2021</p>
+  <p class="date">April 19, 2022</p>
 </section>
 
 <section>
 <section id="matter" class="title-slide slide level1">
 <h1>Matter</h1>
-
+<figure>
+<img data-src="matter.png" alt=" " /><figcaption aria-hidden="true"> </figcaption>
+</figure>
+<p>BY</p>
+<figure>
+<img data-src="csa-logo-300x76.png" alt=" " /><figcaption aria-hidden="true"> </figcaption>
+</figure>
 </section>
 <section id="objective" class="slide level2">
 <h2>Objective</h2>
 <ul>
 <li>Why <a href="https://buildwithmatter.com">Matter</a>?</li>
-<li>When will it be available?</li>
-<li>How to use it today?</li>
+<li>Core concepts</li>
+<li>Build and test on Linux</li>
+<li>Build on macOS and test on ESP32</li>
+<li>Device commissioning / setup</li>
+<li>Zigbee Cluster Library Specification</li>
+<li>Contributing to the project</li>
 </ul>
 </section>
 <section id="why-matter" class="slide level2">
 <h2>Why Matter?</h2>
 <ul>
-<li>Why smart home?</li>
-<li>Limited smart home potential without interoperable devices</li>
-<li>Matter is driven by industry leading device manufacturers</li>
-<li>Matter implementation is open source and free of royalties</li>
-<li>Matter weaves together existing standards and fills in the blanks</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="internet-protocols">Internet Protocols</h3>
-<figure>
-<img data-src="internet-protocols.png" alt="IP Pyramid" /><figcaption aria-hidden="true">IP Pyramid</figcaption>
-</figure>
-</section>
-<section id="when-will-it-be-available" class="slide level2">
-<h2>When will it be available?</h2>
-<ul>
-<li><p>Devices that support Matter <a href="https://www.cepro.com/news/matter-smart-home-standard-timeline-2022/">pushed to sometime in 2022</a></p></li>
-<li><p>Preliminary support available on <a href="https://developers.google.com/home/matter">Android 12</a> and <a href="https://developer.apple.com/documentation/homekit/">iOS 15</a></p></li>
-<li><p>Wide adoption is expected</p>
-<figure>
-<img data-src="alliance.png" alt="Alliance Members" /><figcaption aria-hidden="true">Alliance Members</figcaption>
-</figure></li>
-</ul>
-</section>
-<section id="how-to-use-it-today" class="slide level2">
-<h2>How to use it today?</h2>
-<ul>
-<li>Start by reading the docs at <a href="https://github.com/project-chip/connectedhomeip">https://github.com/project-chip/connectedhomeip</a></li>
-<li>Try it out in Linux on a Raspberry Pi</li>
-<li>Try it out on an embedded device such as ESP32</li>
+<li>Simple, <a href="https://youtu.be/v_285vCHifw">interoperable</a>, reliable, and <a href="https://www.youtube.com/watch?v=Q4jhK-IBKuI">secure</a></li>
+<li><a href="https://csa-iot.org/members/">Promoted by</a> industry leading device manufacturers</li>
+<li>Apache-2 licensed source code, free of royalties</li>
+<li>Devices available <a href="https://www.cepro.com/news/matter-smart-home-standard-timeline-2022/">sometime in 2022</a></li>
+<li>Preliminary support available on <a href="https://developers.google.com/home/matter">Android 12</a> and <a href="https://developer.apple.com/documentation/homekit/">iOS 15</a></li>
 </ul>
 </section>
 <section class="slide level2">
@@ -204,191 +188,201 @@
 </section>
 <section class="slide level2">
 
-<h3 id="architecture">Architecture</h3>
+<h3 id="internet-protocols">Internet Protocols</h3>
 <figure>
-<img data-src="architecture.png" alt="Architecture Pyramid" /><figcaption aria-hidden="true">Architecture Pyramid</figcaption>
+<img data-src="internet-protocols.png" alt=" " /><figcaption aria-hidden="true"> </figcaption>
 </figure>
 </section>
 <section class="slide level2">
 
-<h3 id="code-repository">Code Repository</h3>
-<div class="columns">
-<div class="column" style="width:50%;">
-<pre class="text"><code>BUILD.gn
-CONTRIBUTING.md
-build
-build_overrides
-docs
-examples
-    all-clusters-app
-        all-clusters-common
-        esp32
-        linux
-    bridge-app
-    chip-tool
-    common
-    platform
-        esp32
-        linux
-integrations</code></pre>
-</div><div class="column" style="width:50%;">
-<pre class="text"><code>scripts
-    activate.sh -&gt; bootstrap.sh
-    bootstrap.sh
-src
-    include
-    lib
-    platform
-        ESP32
-        Linux
-    protocols
-    system
-    tools
-        chip-cert
-    transport
-third_party
-    pigweed
-    zap
-zzz_generated</code></pre>
-</div>
-</div>
+<h3 id="architecture">Architecture</h3>
+<figure>
+<img data-src="architecture.png" alt=" " /><figcaption aria-hidden="true"> </figcaption>
+</figure>
+</section>
+<section id="how-to-use-it-today" class="slide level2">
+<h2>How to use it today?</h2>
+<ul>
+<li>Start by reading the docs at <a href="https://github.com/project-chip/connectedhomeip">https://github.com/project-chip/connectedhomeip</a></li>
+<li>Try it out with Linux on a Raspberry Pi</li>
+<li>Try it out with an embedded device such as ESP32</li>
+</ul>
 </section>
 <section class="slide level2">
 
-<h3 id="supported-development-platforms">Supported development platforms</h3>
-<div class="columns">
-<div class="column" data-text-align="left" style="width:50%;">
+<h3 id="code-repository">Code Repository</h3>
 <ul>
-<li>Embedded
+<li>BUILD.gn</li>
+<li>CONTRIBUTING.md</li>
+<li>build</li>
+<li>build_overrides</li>
+<li>docs</li>
+<li>examples
+<ul>
+<li>all-clusters-app</li>
+<li>chip-tool</li>
+</ul></li>
+<li>scripts</li>
+<li>src
+<ul>
+<li>platform
 <ul>
 <li>ESP32</li>
+<li>Linux</li>
+</ul></li>
+</ul></li>
+<li>third_party
+<ul>
+<li>zap</li>
+</ul></li>
+<li>zzz_generated</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="supported-platforms">Supported Platforms</h3>
+<ul>
+<li><a href="https://youtu.be/bS9Ch7k_GK0">ESP32</a></li>
 <li>FreeRTOS</li>
 <li>Linux</li>
-<li>mbed</li>
-<li>nrfconnect</li>
-<li>nxp</li>
+<li>Mbed OS</li>
+<li><a href="https://youtu.be/kdMJQFDRoss">nRF Connect</a></li>
+<li><a href="https://youtu.be/PQyahv2m0p4">NXP</a></li>
 <li>Tizen</li>
 <li>Zephyr</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<ul>
-<li>Mobile
-<ul>
-<li>Android</li>
-<li>iOS</li>
-</ul></li>
-<li>Desktop
-<ul>
-<li>Linux</li>
-<li>macOS</li>
-<li>Windows</li>
-</ul></li>
-</ul>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="linux-device-firmware-development">Linux Device Firmware Development</h3>
-<ul>
-<li><p>Build and test on a Raspberry Pi 4</p></li>
-<li><p>Install toolchain</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install git gcc g++ python pkg-config <span class="dt">\</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  libssl-dev libdbus-1-dev libglib2.0-dev <span class="dt">\</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  ninja-build python3-venv python3-dev unzip</span></code></pre></div></li>
-<li><p>Build and run all-clusters-app</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--recurse-submodules</span> <span class="dt">\</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  https://github.com/project-chip/connectedhomeip</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> connectedhomeip</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">unalias</span> python</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ./scripts/bootstrap.sh</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ./scripts/activate.sh</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> examples/all-clusters-app/linux</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">gn</span> gen out/debug</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="ex">ninja</span> <span class="at">-C</span> out/debug</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Delete network</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-all-clusters-app</span> <span class="at">--wifi</span></span></code></pre></div></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<h3 id="esp32-device-firmware-development">ESP32 Device Firmware Development</h3>
+<h3 id="linux-device-development">Linux Device Development</h3>
 <ul>
-<li><p>Build on macOS and test on <a href="https://m5stack.com">M5STACK</a> Core 2</p></li>
-<li><p>Install ESP-IDF</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/espressif/esp-idf.git</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> esp-idf</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout v4.3</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> submodule update <span class="at">--init</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">./install.sh</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ./export.sh</span></code></pre></div></li>
-<li><p>Build and run all-clusters-app example on device</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> connectedhomeip</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">unalias</span> python</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ./scripts/bootstrap.sh</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ./scripts/activate.sh</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> examples/all-clusters-app/esp32</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ex">idf.py</span> build</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ex">idf.py</span> <span class="at">-p</span> /dev/cu.usbserial-022D45D6 erase_flash <span class="dt">\</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  flash monitor</span></code></pre></div></li>
+<li>Build and test on a Raspberry Pi 4</li>
 </ul>
+<figure>
+<img data-src="raspberry-pi-4.png" alt="Raspberry Pi 4" /><figcaption aria-hidden="true">Raspberry Pi 4</figcaption>
+</figure>
+</section>
+<section class="slide level2">
+
+<h4 id="install-build-toolchain-on-linux">Install build toolchain on Linux</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install git gcc g++ python pkg-config <span class="dt">\</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  libssl-dev libdbus-1-dev libglib2.0-dev <span class="dt">\</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  ninja-build python3-venv python3-dev unzip</span></code></pre></div>
+</section>
+<section class="slide level2">
+
+<h4 id="build-and-run-all-clusters-app-on-linux">Build and run all-clusters-app on Linux</h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--recurse-submodules</span> <span class="dt">\</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  https://github.com/project-chip/connectedhomeip</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> connectedhomeip</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">unalias</span> python</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ./scripts/bootstrap.sh</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ./scripts/activate.sh</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> examples/all-clusters-app/linux</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">gn</span> gen out/debug</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ex">ninja</span> <span class="at">-C</span> out/debug</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Delete network</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-all-clusters-app</span> <span class="at">--wifi</span></span></code></pre></div>
+</section>
+<section class="slide level2">
+
+<h3 id="esp32-device-development">ESP32 Device Development</h3>
+<ul>
+<li>Build on macOS and test on <a href="https://m5stack.com">M5STACK</a> Core 2</li>
+</ul>
+<figure>
+<img data-src="m5stack-core2.png" alt="M5STACK CORE 2" /><figcaption aria-hidden="true">M5STACK CORE 2</figcaption>
+</figure>
+</section>
+<section class="slide level2">
+
+<h4 id="install-esp-idf">Install ESP-IDF</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/espressif/esp-idf.git</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> esp-idf</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout v4.3</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> submodule update <span class="at">--init</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">./install.sh</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ./export.sh</span></code></pre></div>
+</section>
+<section class="slide level2">
+
+<h4 id="build-and-run-all-clusters-app-on-esp32">Build and run all-clusters-app on ESP32</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> connectedhomeip</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">unalias</span> python</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ./scripts/bootstrap.sh</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ./scripts/activate.sh</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> examples/all-clusters-app/esp32</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">idf.py</span> build</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ex">idf.py</span> <span class="at">-p</span> /dev/cu.usbserial-022D45D6 erase_flash <span class="dt">\</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  flash monitor</span></code></pre></div>
 </section>
 <section class="slide level2">
 
 <h3 id="chip-tool">chip-tool</h3>
-<p>Command line tool to commission and interact with devices</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> connectedhomeip</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">unalias</span> python</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ./scripts/bootstrap.sh</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ./scripts/activate.sh</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> examples/chip-tool</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ex">gn</span> gen out/debug</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="ex">ninja</span> <span class="at">-C</span> out/debug</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> onoff toggle 1 1</span></code></pre></div>
+<ul>
+<li>Command line tool to commission and interact with devices</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="install-dependencies-to-build-chip-tool-on-macos">Install dependencies to build chip-tool on macOS</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install openssl pkg-config</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /usr/local/lib/pkgconfig</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> ../../Cellar/openssl@1.1/1.1.1n/lib/pkgconfig/<span class="pp">*</span> .</span></code></pre></div>
+</section>
+<section class="slide level2">
+
+<h4 id="build-and-run-chip-tool-on-macos">Build and run chip-tool on macOS</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> connectedhomeip</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">unalias</span> python</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ./scripts/bootstrap.sh</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ./scripts/activate.sh</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> examples/chip-tool</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ex">gn</span> gen out/debug</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ex">ninja</span> <span class="at">-C</span> out/debug</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> onoff toggle 1 1</span></code></pre></div>
 </section>
 <section class="slide level2">
 
 <h3 id="commissioning">Commissioning</h3>
 <ul>
 <li><p>Configures device into a Matter fabric</p></li>
-<li><p>Pair device with multiple controllers</p></li>
+<li><p>Pair device with multiple controllers / admins</p></li>
 <li><p>Commissioning over BLE/Wi-Fi using <code>chip-tool</code></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chip-tool</span> pairing ble-wifi <span class="dt">\</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  ssid <span class="st">&quot;password&quot;</span> <span class="dt">\</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  0 20202021 3840</span></code></pre></div></li>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> pairing ble-wifi <span class="dt">\</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  1 ssid <span class="st">&quot;password&quot;</span> <span class="dt">\</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  20202021 3840</span></code></pre></div></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<h3 id="commissioning-on-android-12">Commissioning on Android 12</h3>
-<p><a href="(https://www.youtube.com/watch?v=I_hY90Xu3xg)"><img data-src="android-commissioning.png" alt="Android 12 commissioning" /></a></p>
+<h3 id="device-setup-flow-on-android-12">Device Setup Flow on Android 12</h3>
+<p><a href="https://youtu.be/3IKmgnS6FDg?t=518"><img data-src="android-commissioning.png" alt=" " /></a></p>
 </section>
 <section class="slide level2">
 
-<h3 id="commissioning-on-ios">Commissioning on iOS</h3>
-<div class="columns">
-<div class="column" style="width:60%;">
+<h3 id="device-commissioning-on-ios-15">Device Commissioning on iOS 15</h3>
+<p><a href="https://developer.apple.com/videos/play/wwdc2021/10298/"><img data-src="ios15-commissioning.png" alt=" " /></a></p>
+</section>
+<section class="slide level2">
+
+<h3 id="pair-with-another-controller-admin">Pair with another controller / admin</h3>
 <ul>
-<li>Open the Home app and tap Add Accessory or Add</li>
-<li>Tap Add Accessory</li>
-<li>Use the camera on your iPhone, iPad, or iPod touch to scan the QR code on the accessory or accessory documentation</li>
-<li>When your accessory appears, tap it. If asked to Add Accessory to Network, tap Allow.</li>
-<li>Name your accessory and assign it to a room to help you identify it in the Home app and control it with Siri</li>
-<li>Tap Next, then tap Done.</li>
+<li><p>Open commissioning window on device</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> pairing <span class="dt">\</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  open-commissioning-window <span class="dt">\</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  1 1 400 2000 3840</span></code></pre></div></li>
+<li><p>Use <code>onnetwork</code> pairing to discover devices and pair with first device found</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> pairing onnetwork 0 20202021</span></code></pre></div></li>
 </ul>
-</div><div class="column" style="width:40%;">
-<p><a href="(https://support.apple.com/en-us/HT204893)"><img data-src="ios15-commissioning.png" alt="iOS 15 commissioning" /></a></p>
-</div>
-</div>
 </section>
 <section class="slide level2">
 
 <h3 id="read-attributes-using-chip-tool">Read attributes using chip-tool</h3>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chip-tool</span> onoff read on-off 1 1</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">chip-tool</span> pressuremeasurement read measured-value 1 1</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">chip-tool</span> relativehumiditymeasurement read measured-value 1 1</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ex">chip-tool</span> temperaturemeasurement read measured-value 1 1</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> onoff read on-off 1 1</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> pressuremeasurement read measured-value 1 1</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> relativehumiditymeasurement read measured-value 1 1</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> temperaturemeasurement read measured-value 1 1</span></code></pre></div>
 <pre class="log"><code>CHIP: [DMG]                 }
 CHIP: [DMG]                     
 CHIP: [DMG]                     Data = -32768, 
@@ -398,8 +392,8 @@ CHIP: [DMG]             },</code></pre>
 <section class="slide level2">
 
 <h3 id="write-attributes-using-chip-tool">Write attributes using chip-tool</h3>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chip-tool</span> onoff write on-time 5 1 1</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">chip-tool</span> onoff read on-time 1 1</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> onoff write on-time 5 1 1</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> onoff read on-time 1 1</span></code></pre></div>
 <pre class="log"><code>CHIP: [DMG]                 }
 CHIP: [DMG]                     
 CHIP: [DMG]                     Data = 5, 
@@ -409,8 +403,8 @@ CHIP: [DMG]             },</code></pre>
 <section class="slide level2">
 
 <h3 id="send-commands-using-chip-tool">Send commands using chip-tool</h3>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chip-tool</span> onoff toggle 1 1</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">chip-tool</span> onoff read on-off 1 1</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> onoff toggle 1 1</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> onoff read on-off 1 1</span></code></pre></div>
 <pre class="log"><code>CHIP: [DMG]                 }
 CHIP: [DMG]                     
 CHIP: [DMG]                     Data = true, 
@@ -422,13 +416,13 @@ CHIP: [DMG]             },</code></pre>
 <h3 id="view-device-configuration-using-zap-tool">View device configuration using ZAP Tool</h3>
 <ul>
 <li><p>Endpoints are defined (along with the clusters and attributes they contain) in a <code>.zap</code> file which then generates code and static structures to define the endpoints</p></li>
-<li><p>Run Zigbee Cluster Configurator</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install nvm</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">nvm</span> use stable</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> connectedhomeip</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> third-party/zap/repo</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> i</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run zap</span></code></pre></div></li>
+<li><p>Run <a href="https://github.com/project-chip/zap">Zigbee Cluster Configurator</a></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install nvm</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">nvm</span> use stable</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> connectedhomeip</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> third-party/zap/repo</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> i</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run zap</span></code></pre></div></li>
 <li><p>Open <code>examples/all-clusters-app/all-clusters-common/all-clusters-app.zap</code></p></li>
 <li><p>Data definition specified in Zigbee Cluster Library Specification</p></li>
 </ul>
@@ -438,13 +432,13 @@ CHIP: [DMG]             },</code></pre>
 <h3 id="contributing-to-matter">Contributing to Matter</h3>
 <ul>
 <li><p>Read CONTRIBUTING.md</p></li>
-<li><p>Submit bugs and features to https://github.com/project-chip/connectedhomeip/issues</p></li>
+<li><p>Submit bugs and features to <a href="https://github.com/project-chip/connectedhomeip/issues">https://github.com/project-chip/connectedhomeip/issues</a></p></li>
 <li><p>Change code</p></li>
-<li><p>Run automated test suite on host using <a href="https://github.com/nektos/act">act</a> e.g.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install act</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">act</span> <span class="at">-j</span> test_suites_linux</span></code></pre></div></li>
-<li><p>Run test on device using chip-tool</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chip-tool</span> tests TestCluster 1</span></code></pre></div></li>
+<li><p>Run automated test suite on host using <a href="https://github.com/nektos/act">act</a> e.g. on macOS</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install act</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">act</span> <span class="at">-j</span> test_suites_linux</span></code></pre></div></li>
+<li><p>Run tests on device using chip-tool</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> tests TestCluster <span class="at">--node-id</span> 1</span></code></pre></div></li>
 <li><p>Submit pull request via GitHub for maintainers to review and merge</p></li>
 </ul>
 </section></section>

@@ -1,40 +1,28 @@
 # Matter
 
+![&nbsp;](matter.png)
+
+BY
+
+![&nbsp;](csa-logo-300x76.png)
+
 ## Objective
 
 - Why [Matter](https://buildwithmatter.com)?
-- When will it be available?
-- How to use it today?
+- Core concepts
+- Build and test on Linux
+- Build on macOS and test on ESP32
+- Device commissioning / setup
+- Zigbee Cluster Library Specification
+- Contributing to the project
 
 ## Why Matter?
 
-- Why smart home?
-- Limited smart home potential without interoperable devices
-- Matter is driven by industry leading device manufacturers
-- Matter implementation is open source and free of royalties
-- Matter weaves together existing standards and fills in the blanks
-
----
-
-### Internet Protocols
-
-![IP Pyramid](internet-protocols.png)
-
----
-
-## When will it be available?
-
-- Devices that support Matter [pushed to sometime in 2022](https://www.cepro.com/news/matter-smart-home-standard-timeline-2022/)
+- Simple, [interoperable](https://youtu.be/v_285vCHifw), reliable, and [secure](https://www.youtube.com/watch?v=Q4jhK-IBKuI)
+- [Promoted by](https://csa-iot.org/members/) industry leading device manufacturers
+- Apache-2 licensed source code, free of royalties
+- Devices available [sometime in 2022](https://www.cepro.com/news/matter-smart-home-standard-timeline-2022/)
 - Preliminary support available on [Android 12](https://developers.google.com/home/matter) and [iOS 15](https://developer.apple.com/documentation/homekit/)
-- Wide adoption is expected
-  
-  ![Alliance Members](alliance.png)
-
-## How to use it today?
-
-- Start by reading the docs at [https://github.com/project-chip/connectedhomeip](https://github.com/project-chip/connectedhomeip)
-- Try it out in Linux on a Raspberry Pi
-- Try it out on an embedded device such as ESP32
 
 ---
 
@@ -53,176 +41,149 @@ Fabric                      | Network            | Network
 
 ---
 
+### Internet Protocols
+
+![&nbsp;](internet-protocols.png)
+
+---
+
 ### Architecture
 
-![Architecture Pyramid](architecture.png)
+![&nbsp;](architecture.png)
+
+---
+
+## How to use it today?
+
+- Start by reading the docs at [https://github.com/project-chip/connectedhomeip](https://github.com/project-chip/connectedhomeip)
+- Try it out with Linux on a Raspberry Pi
+- Try it out with an embedded device such as ESP32
 
 ---
 
 ### Code Repository
 
-:::: {.columns}
-
-::: {.column width="50%"}
-
-```text
-BUILD.gn
-CONTRIBUTING.md
-build
-build_overrides
-docs
-examples
-    all-clusters-app
-        all-clusters-common
-        esp32
-        linux
-    bridge-app
-    chip-tool
-    common
-    platform
-        esp32
-        linux
-integrations
-```
-
-:::
-
-::: {.column width="50%"}
-
-```text
-scripts
-    activate.sh -> bootstrap.sh
-    bootstrap.sh
-src
-    include
-    lib
-    platform
-        ESP32
-        Linux
-    protocols
-    system
-    tools
-        chip-cert
-    transport
-third_party
-    pigweed
-    zap
-zzz_generated
-```
-
-:::
-
-::::
+- BUILD.gn
+- CONTRIBUTING.md
+- build
+- build_overrides
+- docs
+- examples
+  - all-clusters-app
+  - chip-tool
+- scripts
+- src
+  - platform
+    - ESP32
+    - Linux
+- third_party
+  - zap
+- zzz_generated
 
 ---
 
-### Supported development platforms
+### Supported Platforms
 
-:::: {.columns}
-
-::: {.column width="50%" text-align="left"}
-
-- Embedded
-  - ESP32
-  - FreeRTOS
-  - Linux
-  - mbed
-  - nrfconnect
-  - nxp
-  - Tizen
-  - Zephyr
-
-:::
-
-::: {.column width="50%"}
-
-- Mobile
-  - Android
-  - iOS
-- Desktop
-  - Linux
-  - macOS
-  - Windows
-
-:::
-
-::::
+- [ESP32](https://youtu.be/bS9Ch7k_GK0)
+- FreeRTOS
+- Linux
+- Mbed OS
+- [nRF Connect](https://youtu.be/kdMJQFDRoss)
+- [NXP](https://youtu.be/PQyahv2m0p4)
+- Tizen
+- Zephyr
 
 ---
 
-### Linux Device Firmware Development
+### Linux Device Development
 
 - Build and test on a Raspberry Pi 4
 
-- Install toolchain
-
-  ```bash
-  sudo apt-get install git gcc g++ python pkg-config \
-    libssl-dev libdbus-1-dev libglib2.0-dev \
-    ninja-build python3-venv python3-dev unzip
-  ```
-
-- Build and run all-clusters-app
-
-  ```bash
-  git clone --recurse-submodules \
-    https://github.com/project-chip/connectedhomeip
-  cd connectedhomeip
-  unalias python
-  source ./scripts/bootstrap.sh
-  source ./scripts/activate.sh
-  cd examples/all-clusters-app/linux
-  gn gen out/debug
-  ninja -C out/debug
-  # Delete network
-  ./out/debug/chip-all-clusters-app --wifi
-  ```
+![Raspberry Pi 4](raspberry-pi-4.png)
 
 ---
 
-### ESP32 Device Firmware Development
+#### Install build toolchain on Linux
+
+```bash
+sudo apt-get install git gcc g++ python pkg-config \
+  libssl-dev libdbus-1-dev libglib2.0-dev \
+  ninja-build python3-venv python3-dev unzip
+```
+
+---
+
+#### Build and run all-clusters-app on Linux
+
+```bash
+git clone --recurse-submodules \
+  https://github.com/project-chip/connectedhomeip
+cd connectedhomeip
+unalias python
+source ./scripts/bootstrap.sh
+source ./scripts/activate.sh
+cd examples/all-clusters-app/linux
+gn gen out/debug
+ninja -C out/debug
+# Delete network
+./out/debug/chip-all-clusters-app --wifi
+```
+
+---
+
+### ESP32 Device Development
 
 - Build on macOS and test on [M5STACK](https://m5stack.com) Core 2
 
-- Install ESP-IDF
-  
-  ```bash
-  git clone https://github.com/espressif/esp-idf.git
-  cd esp-idf
-  git checkout v4.3
-  git submodule update --init
-  ./install.sh
-  source ./export.sh
-  ```
+![M5STACK CORE 2](m5stack-core2.png)
 
-- Build and run all-clusters-app example on device
+---
 
-  ```bash
-  cd connectedhomeip
-  unalias python
-  source ./scripts/bootstrap.sh
-  source ./scripts/activate.sh
-  cd examples/all-clusters-app/esp32
-  idf.py build
-  idf.py -p /dev/cu.usbserial-022D45D6 erase_flash \
-    flash monitor
-  ```
+#### Install ESP-IDF
+
+```bash
+git clone https://github.com/espressif/esp-idf.git
+cd esp-idf
+git checkout v4.3
+git submodule update --init
+./install.sh
+source ./export.sh
+```
+
+---
+
+#### Build and run all-clusters-app on ESP32
+
+```bash
+cd connectedhomeip
+unalias python
+source ./scripts/bootstrap.sh
+source ./scripts/activate.sh
+cd examples/all-clusters-app/esp32
+idf.py build
+idf.py -p /dev/cu.usbserial-022D45D6 erase_flash \
+  flash monitor
+```
 
 ---
 
 ### chip-tool
 
-Command line tool to commission and interact with devices
+- Command line tool to commission and interact with devices
 
-Install dependencies for macOS
+---
+
+#### Install dependencies to build chip-tool on macOS
 
 ```bash
 brew install openssl pkg-config
 cd /usr/local/lib/pkgconfig
-ln -s ../../Cellar/openssl@1.1/1.1.1g/lib/pkgconfig/* .
+ln -s ../../Cellar/openssl@1.1/1.1.1n/lib/pkgconfig/* .
 ```
 
-Build and run
+---
+
+#### Build and run chip-tool on macOS
 
 ```bash
 cd connectedhomeip
@@ -241,77 +202,55 @@ ninja -C out/debug
 
 - Configures device into a Matter fabric
 
-- Pair device with multiple controllers
+- Pair device with multiple controllers / admins
 
 - Commissioning over BLE/Wi-Fi using `chip-tool`
   
   ```bash
-  chip-tool pairing ble-wifi \
-    ssid "password" \
-    0 20202021 3840
+  ./out/debug/chip-tool pairing ble-wifi \
+    1 ssid "password" \
+    20202021 3840
   ```
 
 ---
 
-### Commissioning on Android 12
+### Device Setup Flow on Android 12
 
-[![Android 12 commissioning](android-commissioning.png)]((https://www.youtube.com/watch?v=I_hY90Xu3xg))
-
----
-
-### Commissioning on iOS 15
-
-:::: {.columns}
-
-::: {.column width="60%"}
-
-- Open the Home app and tap Add Accessory or Add
-- Tap Add Accessory
-- Use the camera on your iPhone, iPad, or iPod touch to scan the QR code on the
-  accessory or accessory documentation
-- When your accessory appears, tap it. If asked to Add Accessory to Network, tap
-  Allow.
-- Name your accessory and assign it to a room to help you identify it in the
-  Home app and control it with Siri
-- Tap Next, then tap Done.
-
-:::
-
-::: {.column width="40%"}
-
-[![iOS 15 commissioning](ios15-commissioning.png)]((https://support.apple.com/en-us/HT204893))
-
-:::
-
-::::
+[![&nbsp;](android-commissioning.png)](https://youtu.be/3IKmgnS6FDg?t=518)
 
 ---
 
-### Pair with another controller
+### Device Commissioning on iOS 15
 
-Open commissioning window on device
+[![&nbsp;](ios15-commissioning.png)](https://developer.apple.com/videos/play/wwdc2021/10298/)
 
-```bash
-./out/debug/chip-tool pairing \
-  open-commissioning-window \
-  1 1 400 2000 3840
-```
+---
 
-Use `onnetwork` pairing to discover devices and pair with first device found
+### Pair with another controller / admin
 
-```bash
-./out/debug/chip-tool pairing onnetwork 0 20202021
-```
+- Open commissioning window on device
+
+  ```bash
+  ./out/debug/chip-tool pairing \
+    open-commissioning-window \
+    1 1 400 2000 3840
+  ```
+
+- Use `onnetwork` pairing to discover devices and pair with first device found
+
+  ```bash
+  ./out/debug/chip-tool pairing onnetwork 0 20202021
+  ```
 
 ---
 
 ### Read attributes using chip-tool
 
 ```bash
-chip-tool onoff read on-off 1 1
-chip-tool pressuremeasurement read measured-value 1 1
-chip-tool relativehumiditymeasurement read measured-value 1 1
-chip-tool temperaturemeasurement read measured-value 1 1
+./out/debug/chip-tool onoff read on-off 1 1
+./out/debug/chip-tool pressuremeasurement read measured-value 1 1
+./out/debug/chip-tool relativehumiditymeasurement read measured-value 1 1
+./out/debug/chip-tool temperaturemeasurement read measured-value 1 1
 ```
 
 ```log
@@ -327,8 +266,8 @@ CHIP: [DMG] 			},
 ### Write attributes using chip-tool
 
 ```bash
-chip-tool onoff write on-time 5 1 1
-chip-tool onoff read on-time 1 1
+./out/debug/chip-tool onoff write on-time 5 1 1
+./out/debug/chip-tool onoff read on-time 1 1
 ```
 
 ```log
@@ -344,8 +283,8 @@ CHIP: [DMG] 			},
 ### Send commands using chip-tool
 
 ```bash
-chip-tool onoff toggle 1 1
-chip-tool onoff read on-off 1 1
+./out/debug/chip-tool onoff toggle 1 1
+./out/debug/chip-tool onoff read on-off 1 1
 ```
 
 ```log
@@ -363,7 +302,7 @@ CHIP: [DMG] 			},
 - Endpoints are defined (along with the clusters and attributes they contain) in
   a `.zap` file which then generates code and static structures to define the endpoints
 
-- Run Zigbee Cluster Configurator
+- Run [Zigbee Cluster Configurator](https://github.com/project-chip/zap)
 
   ```bash
   brew install nvm
@@ -384,21 +323,21 @@ CHIP: [DMG] 			},
 
 - Read CONTRIBUTING.md
 
-- Submit bugs and features to https://github.com/project-chip/connectedhomeip/issues
+- Submit bugs and features to [https://github.com/project-chip/connectedhomeip/issues](https://github.com/project-chip/connectedhomeip/issues)
 
 - Change code
 
-- Run automated test suite on host using [act](https://github.com/nektos/act) e.g.
+- Run automated test suite on host using [act](https://github.com/nektos/act) e.g. on macOS
 
   ```bash
   brew install act
   act -j test_suites_linux
   ```
 
-- Run test on device using chip-tool
+- Run tests on device using chip-tool
 
   ```bash
-  chip-tool tests TestCluster 1
+  ./out/debug/chip-tool tests TestCluster --node-id 1
   ```
 
 - Submit pull request via GitHub for maintainers to review and merge
