@@ -82,7 +82,7 @@ Fabric                      | Network            | Network
 
 ---
 
-### Code Repository - src
+### `src` directory
 
 - `/src`
 
@@ -106,7 +106,7 @@ Fabric                      | Network            | Network
 
 ---
 
-### Code Repository - examples
+### `examples` directory
 
 - `/examples`
 
@@ -159,8 +159,7 @@ Fabric                      | Network            | Network
 
 ---
 
-#### Build and run all-clusters-app
-
+#### Build and run `all-clusters-app`
 - Build steps
 
   ```bash
@@ -202,7 +201,7 @@ Fabric                      | Network            | Network
 
 ---
 
-#### Build and run all-clusters-app on ESP32
+#### Build and run `all-clusters-app` on ESP32
 
 - Assuming you've cloned source code repo
 - Build steps
@@ -222,14 +221,14 @@ Fabric                      | Network            | Network
 
 ---
 
-### chip-tool
+### `chip-tool`
 
 - Command line tool to commission and interact with devices
 - At least five different flavors - Android, iOS, Posix, Darwin, and Python
 
 ---
 
-#### Install dependencies to build chip-tool on macOS
+#### Install dependencies to build `chip-tool` on `macOS`
 
 - Install dependencies using Homebrew
 
@@ -241,7 +240,7 @@ Fabric                      | Network            | Network
 
 ---
 
-#### Build and run chip-tool on macOS
+#### Build and run `chip-tool` on `macOS`
 
 - Assuming you've cloned source code repo
 - Build steps
@@ -281,7 +280,7 @@ Fabric                      | Network            | Network
 
 ---
 
-### Device Commissioning on iOS 15
+### Device Commissioning on `iOS` 15
 
 - A hub device such as Apple TV 4K is needed
 - A Matter profile needs to be installed on iOS and hub
@@ -310,7 +309,7 @@ Fabric                      | Network            | Network
 
 ---
 
-### Read attributes using chip-tool
+### Read attributes using `chip-tool`
 
 - Try
 
@@ -331,7 +330,7 @@ Fabric                      | Network            | Network
 
 ---
 
-### Write attributes using chip-tool
+### Write attributes using `chip-tool`
 
 - Try
 
@@ -350,7 +349,7 @@ Fabric                      | Network            | Network
 
 ---
 
-### Send commands using chip-tool
+### Send commands using `chip-tool`
 
 - Try
 

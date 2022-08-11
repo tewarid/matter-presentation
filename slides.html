@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Devendra Tewari">
-  <meta name="dcterms.date" content="2022-05-18">
+  <meta name="dcterms.date" content="2022-08-11">
   <title>Matter</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -86,7 +86,7 @@
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/white.css" id="theme">
 </head>
 <body>
   <div class="reveal">
@@ -95,7 +95,7 @@
 <section id="title-slide">
   <h1 class="title">Matter</h1>
   <p class="author">Devendra Tewari</p>
-  <p class="date">May 18, 2022</p>
+  <p class="date">August 11, 2022</p>
 </section>
 
 <section>
@@ -229,7 +229,7 @@ zzz_generated</code></pre></li>
 </section>
 <section class="slide level2">
 
-<h3 id="code-repository---src">Code Repository - src</h3>
+<h3 id="src-directory"><code>src</code> directory</h3>
 <ul>
 <li><p><code>/src</code></p>
 <pre class="text"><code>BUILD.gn
@@ -251,7 +251,7 @@ transport</code></pre></li>
 </section>
 <section class="slide level2">
 
-<h3 id="code-repository---examples">Code Repository - examples</h3>
+<h3 id="examples-directory"><code>examples</code> directory</h3>
 <ul>
 <li><p><code>/examples</code></p>
 <pre class="text"><code>all-clusters-app
@@ -303,7 +303,7 @@ platform</code></pre></li>
 </section>
 <section class="slide level2">
 
-<h4 id="build-and-run-all-clusters-app">Build and run all-clusters-app</h4>
+<h4 id="build-and-run-all-clusters-app">Build and run <code>all-clusters-app</code></h4>
 <ul>
 <li><p>Build steps</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--recurse-submodules</span> <span class="dt">\</span></span>
@@ -344,7 +344,7 @@ platform</code></pre></li>
 </section>
 <section class="slide level2">
 
-<h4 id="build-and-run-all-clusters-app-on-esp32">Build and run all-clusters-app on ESP32</h4>
+<h4 id="build-and-run-all-clusters-app-on-esp32">Build and run <code>all-clusters-app</code> on ESP32</h4>
 <ul>
 <li><p>Assuming you’ve cloned source code repo</p></li>
 <li><p>Build steps</p>
@@ -361,7 +361,7 @@ platform</code></pre></li>
 </section>
 <section class="slide level2">
 
-<h3 id="chip-tool">chip-tool</h3>
+<h3 id="chip-tool"><code>chip-tool</code></h3>
 <ul>
 <li>Command line tool to commission and interact with devices</li>
 <li>At least five different flavors - Android, iOS, Posix, Darwin, and Python</li>
@@ -369,7 +369,7 @@ platform</code></pre></li>
 </section>
 <section class="slide level2">
 
-<h4 id="install-dependencies-to-build-chip-tool-on-macos">Install dependencies to build chip-tool on macOS</h4>
+<h4 id="install-dependencies-to-build-chip-tool-on-macos">Install dependencies to build <code>chip-tool</code> on <code>macOS</code></h4>
 <ul>
 <li><p>Install dependencies using Homebrew</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install openssl pkg-config</span>
@@ -379,7 +379,7 @@ platform</code></pre></li>
 </section>
 <section class="slide level2">
 
-<h4 id="build-and-run-chip-tool-on-macos">Build and run chip-tool on macOS</h4>
+<h4 id="build-and-run-chip-tool-on-macos">Build and run <code>chip-tool</code> on <code>macOS</code></h4>
 <ul>
 <li><p>Assuming you’ve cloned source code repo</p></li>
 <li><p>Build steps</p>
@@ -412,7 +412,7 @@ platform</code></pre></li>
 </section>
 <section class="slide level2">
 
-<h3 id="device-commissioning-on-ios-15">Device Commissioning on iOS 15</h3>
+<h3 id="device-commissioning-on-ios-15">Device Commissioning on <code>iOS</code> 15</h3>
 <ul>
 <li>A hub device such as Apple TV 4K is needed</li>
 <li>A Matter profile needs to be installed on iOS and hub</li>
@@ -434,7 +434,7 @@ platform</code></pre></li>
 </section>
 <section class="slide level2">
 
-<h3 id="read-attributes-using-chip-tool">Read attributes using chip-tool</h3>
+<h3 id="read-attributes-using-chip-tool">Read attributes using <code>chip-tool</code></h3>
 <ul>
 <li><p>Try</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> onoff read on-off 1 1</span>
@@ -450,7 +450,7 @@ CHIP: [DMG]           },</code></pre></li>
 </section>
 <section class="slide level2">
 
-<h3 id="write-attributes-using-chip-tool">Write attributes using chip-tool</h3>
+<h3 id="write-attributes-using-chip-tool">Write attributes using <code>chip-tool</code></h3>
 <ul>
 <li><p>Try</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> onoff write on-time 5 1 1</span>
@@ -464,7 +464,7 @@ CHIP: [DMG]           },</code></pre></li>
 </section>
 <section class="slide level2">
 
-<h3 id="send-commands-using-chip-tool">Send commands using chip-tool</h3>
+<h3 id="send-commands-using-chip-tool">Send commands using <code>chip-tool</code></h3>
 <ul>
 <li><p>Try</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> onoff toggle 1 1</span>
