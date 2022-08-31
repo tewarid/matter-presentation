@@ -160,6 +160,7 @@ Fabric                      | Network            | Network
 ---
 
 #### Build and run `all-clusters-app`
+
 - Build steps
 
   ```bash
@@ -321,10 +322,17 @@ Fabric                      | Network            | Network
   ```
 
   ```log
+  CHIP: [DMG] 			AttributeDataIB =
+  CHIP: [DMG] 			{
+  CHIP: [DMG] 				DataVersion = 0xe46ec823,
+  CHIP: [DMG] 				AttributePathIB =
+  CHIP: [DMG] 				{
+  CHIP: [DMG] 					Endpoint = 0x1,
+  CHIP: [DMG] 					Cluster = 0x402,
+  CHIP: [DMG] 					Attribute = 0x0000_0000,
   CHIP: [DMG] 				}
   CHIP: [DMG] 					
-  CHIP: [DMG] 					Data = -32768, 
-  CHIP: [DMG] 				DataVersion = 0x0,
+  CHIP: [DMG] 				Data = NULL
   CHIP: [DMG] 			},
   ```
 
@@ -340,10 +348,17 @@ Fabric                      | Network            | Network
   ```
 
   ```log
+  CHIP: [DMG] 			AttributeDataIB =
+  CHIP: [DMG] 			{
+  CHIP: [DMG] 				DataVersion = 0xff19c9c1,
+  CHIP: [DMG] 				AttributePathIB =
+  CHIP: [DMG] 				{
+  CHIP: [DMG] 					Endpoint = 0x1,
+  CHIP: [DMG] 					Cluster = 0x6,
+  CHIP: [DMG] 					Attribute = 0x0000_4001,
   CHIP: [DMG] 				}
   CHIP: [DMG] 					
-  CHIP: [DMG] 					Data = 5, 
-  CHIP: [DMG] 				DataVersion = 0x0,
+  CHIP: [DMG] 				Data = 5, 
   CHIP: [DMG] 			},
   ```
 
@@ -359,10 +374,17 @@ Fabric                      | Network            | Network
   ```
 
   ```log
+  CHIP: [DMG] 			AttributeDataIB =
+  CHIP: [DMG] 			{
+  CHIP: [DMG] 				DataVersion = 0xff19c9c3,
+  CHIP: [DMG] 				AttributePathIB =
+  CHIP: [DMG] 				{
+  CHIP: [DMG] 					Endpoint = 0x1,
+  CHIP: [DMG] 					Cluster = 0x6,
+  CHIP: [DMG] 					Attribute = 0x0000_0000,
   CHIP: [DMG] 				}
   CHIP: [DMG] 					
-  CHIP: [DMG] 					Data = true, 
-  CHIP: [DMG] 				DataVersion = 0x0,
+  CHIP: [DMG] 				Data = true, 
   CHIP: [DMG] 			},
   ```
 

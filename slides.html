@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Devendra Tewari">
-  <meta name="dcterms.date" content="2022-08-11">
+  <meta name="dcterms.date" content="2022-08-31">
   <title>Matter</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -95,7 +95,7 @@
 <section id="title-slide">
   <h1 class="title">Matter</h1>
   <p class="author">Devendra Tewari</p>
-  <p class="date">August 11, 2022</p>
+  <p class="date">August 31, 2022</p>
 </section>
 
 <section>
@@ -441,10 +441,17 @@ platform</code></pre></li>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> pressuremeasurement read measured-value 1 1</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> relativehumiditymeasurement read measured-value 1 1</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> temperaturemeasurement read measured-value 1 1</span></code></pre></div>
-<pre class="log"><code>CHIP: [DMG]               }
+<pre class="log"><code>CHIP: [DMG]           AttributeDataIB =
+CHIP: [DMG]           {
+CHIP: [DMG]               DataVersion = 0xe46ec823,
+CHIP: [DMG]               AttributePathIB =
+CHIP: [DMG]               {
+CHIP: [DMG]                   Endpoint = 0x1,
+CHIP: [DMG]                   Cluster = 0x402,
+CHIP: [DMG]                   Attribute = 0x0000_0000,
+CHIP: [DMG]               }
 CHIP: [DMG]                   
-CHIP: [DMG]                   Data = -32768, 
-CHIP: [DMG]               DataVersion = 0x0,
+CHIP: [DMG]               Data = NULL
 CHIP: [DMG]           },</code></pre></li>
 </ul>
 </section>
@@ -455,10 +462,17 @@ CHIP: [DMG]           },</code></pre></li>
 <li><p>Try</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> onoff write on-time 5 1 1</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> onoff read on-time 1 1</span></code></pre></div>
-<pre class="log"><code>CHIP: [DMG]               }
+<pre class="log"><code>CHIP: [DMG]           AttributeDataIB =
+CHIP: [DMG]           {
+CHIP: [DMG]               DataVersion = 0xff19c9c1,
+CHIP: [DMG]               AttributePathIB =
+CHIP: [DMG]               {
+CHIP: [DMG]                   Endpoint = 0x1,
+CHIP: [DMG]                   Cluster = 0x6,
+CHIP: [DMG]                   Attribute = 0x0000_4001,
+CHIP: [DMG]               }
 CHIP: [DMG]                   
-CHIP: [DMG]                   Data = 5, 
-CHIP: [DMG]               DataVersion = 0x0,
+CHIP: [DMG]               Data = 5, 
 CHIP: [DMG]           },</code></pre></li>
 </ul>
 </section>
@@ -469,10 +483,17 @@ CHIP: [DMG]           },</code></pre></li>
 <li><p>Try</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> onoff toggle 1 1</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./out/debug/chip-tool</span> onoff read on-off 1 1</span></code></pre></div>
-<pre class="log"><code>CHIP: [DMG]               }
+<pre class="log"><code>CHIP: [DMG]           AttributeDataIB =
+CHIP: [DMG]           {
+CHIP: [DMG]               DataVersion = 0xff19c9c3,
+CHIP: [DMG]               AttributePathIB =
+CHIP: [DMG]               {
+CHIP: [DMG]                   Endpoint = 0x1,
+CHIP: [DMG]                   Cluster = 0x6,
+CHIP: [DMG]                   Attribute = 0x0000_0000,
+CHIP: [DMG]               }
 CHIP: [DMG]                   
-CHIP: [DMG]                   Data = true, 
-CHIP: [DMG]               DataVersion = 0x0,
+CHIP: [DMG]               Data = true, 
 CHIP: [DMG]           },</code></pre></li>
 </ul>
 </section>
