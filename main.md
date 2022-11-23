@@ -44,13 +44,13 @@ Fabric                      | Network            | Network
 
 ### Internet Protocols
 
-![&nbsp;](internet-protocols.png)
+![&nbsp;](Matter_Arch_Overview.png)
 
 ---
 
 ### Architecture
 
-![&nbsp;](architecture.png)
+![&nbsp;](Matter_Layered_Arch.png)
 
 ---
 
